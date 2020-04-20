@@ -141,20 +141,3 @@ If your COM DLL provides a number of different COM classes, you might wish to ho
 The commonest use case for Dll surrogates is allowing a legacy 32-bit COM object to used in a new 64-bit application, but the same mechanism does work in the other direction, although it is less common for this to be necessary.
 
 You need to add the same registry keys as above, but this time the CLSID will be the one in the 32-bit registry hive so you will use the 32-bit reg.exe from the directory `C:\Windows\syswow64`.
-
-
-
-Summary
-
-While many users of Windows will be able to make use of 64-bit applications with 64-bit COM objects it is good to know that, subject to a few restrictions, you can make use of a mix of 64-bit and 32-bit components by setting only a few registry keys.
-
-Further information
-There is some Microsoft documentation about all this at:
-
-https://msdn.microsoft.com/en-us/library/windows/desktop/ms695225%28v=vs.85%29.aspx
-
-While the technique has been available for some time, there was initially a lack of documentation about the process and, in my experience anyway, few people are aware of the existence of this technique.
---
-(c) Roger Orr - first published in the ACCU magazine CVu (Volume 27 Issue 2)
-$Id: DllSurrogate.rtf 217 2015-04-03 17:43:59Z Roger $
-
